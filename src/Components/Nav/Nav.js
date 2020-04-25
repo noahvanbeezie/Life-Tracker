@@ -7,7 +7,7 @@ function Nav(){
     return(
         <AppBar>
         <div>
-            <h1>NavBar</h1>
+            <h1>Life Tracker</h1>
             <div>
                 <Button>Test1</Button>
                 <Button>Test2</Button>
