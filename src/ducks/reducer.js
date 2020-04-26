@@ -2,7 +2,7 @@ const initialState={
     player:{},
 }
 
-export default function authReducer(state,action) {
+export default function reducer(state,action) {
     if (!state) {return state=initialState}
 
     switch(action.type) {
