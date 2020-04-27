@@ -31,6 +31,5 @@ massive({
 })
 
 // Auth Endpoints
-app.post('/api/login', function(req,res){
-    authController.login})
+app.post('/api/login', authController.login)
 app.post('/api/register', authController.register)
