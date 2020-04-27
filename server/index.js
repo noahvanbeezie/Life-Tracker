@@ -3,6 +3,7 @@ const express = require('express')
 const session = require('express-session')
 const massive = require('massive')
 const { SESSION_SECRET,SERVER_PORT,CONNECTION_STRING } = process.env
+const authController = require('./controllers/authController')
 
 const app = express()
 
@@ -28,3 +29,8 @@ massive({
     app.set('db',db)
     app.listen(port || 4420, () => console.log(`Connected to ${port}`))
 })
+
+// Auth Endpoints
+app.post('/api/login', function(req,res){
+    authController.login})
+app.post('/api/register', authController.register)

@@ -6,8 +6,8 @@ import Auth from './Components/Auth/Auth'
 
 export default (
     <Switch>
+        <Route path='/login' component={Auth}/>
         <Route path='/fitness' component={Fitness}/>
         <Route path='/budget' component={Budget}/>
-        <Route path='/login' component={Auth}/>
     </Switch>
 )
