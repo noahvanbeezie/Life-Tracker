@@ -21,7 +21,7 @@ function Budget(){
     return(
         <div>
             <h1>Budget</h1>
-            <div>
+            <div className='holderDiv'>
                 <div className='inputDiv'>
                     <h2>Income</h2>
                     <Input className={style.input} type='number' onChange={(e) => setIncome(e.target.value)}/>
@@ -31,19 +31,25 @@ function Budget(){
                     <Input className={style.input} type='number' onChange={(e) => setExpenses(e.target.value)}/>
                 </div>
             </div>
-            <div className='budgetDiv'>
+            <div className='holderDiv'>
                 <h2>Budget</h2>
                 <div>
                     <h3>Expected Income:</h3>
-                    {income}
+                    <>
+                        ${income}
+                    </>
                 </div>
                 <div>
                     <h3>Expected Expenses:</h3>
-                    {expenses}
+                    <>
+                        ${expenses}
+                    </>
                 </div>
                 <div>
                     <h3>Income after Expenses:</h3>
-                    {income - expenses}
+                    <>
+                        ${income - expenses}
+                    </>
                 </div>
                 <div>
                     <h3>% Wanting to Save:</h3>
@@ -54,11 +60,30 @@ function Budget(){
                 </div>
                 <div>
                     <h3>Dollar amount saved:</h3>
-                    {Math.floor((income-expenses) * (percentSavings*.01))}
+                    <>
+                        ${Math.floor((income-expenses) * (percentSavings*.01))}
+                    </>
                 </div>
                 <div>
                     <h3>Amount available after Savings:</h3>
-                    {(income - expenses) - (Math.floor((income-expenses) * (percentSavings*.01)))}
+                    <>
+                        ${(income - expenses) - (Math.floor((income-expenses) * (percentSavings*.01)))}
+                    </>
+                </div>
+            </div>
+            <div className='holderDiv'>
+                <h2>Spending Expenses</h2>
+                <div>
+                    <h3>Per Week (Rounded Down):</h3>
+                    <>
+                    ${Math.floor(((income - expenses) - (Math.floor((income-expenses) * (percentSavings*.01)))) / 4.5)}
+                    </>
+                </div>
+                <div>
+                    <h3>Per day (Rounded Down):</h3>
+                    <>
+                    ${Math.floor((((income - expenses) - (Math.floor((income-expenses) * (percentSavings*.01)))) / 4.5)/7)}
+                    </>
                 </div>
             </div>
         </div>

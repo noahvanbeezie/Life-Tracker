@@ -8,8 +8,9 @@
     margin-bottom: 10px;
     flex-direction: column;
 }
-.budgetDiv{
+.holderDiv{
     @include border();
     width: 40%;
     padding-bottom: 10px;
+    margin-left: 30%;
 }
