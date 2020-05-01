@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,SAAS,CAAA;ECDL,OAAO,EAAE,IAAI;EDGb,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,GAAG;EAChB,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;EACnB,cAAc,EAAE,MAAM;CACzB;;AACD,AAAA,UAAU,CAAA;ECNN,MAAM,EAAE,eAAe;EDQvB,KAAK,EAAE,GAAG;EACV,cAAc,EAAE,IAAI;CACvB",
+    "sources": [
+        "Budget.scss",
+        "../Sass/_mixin.scss"
+    ],
+    "names": [],
+    "file": "Budget.css"
+}

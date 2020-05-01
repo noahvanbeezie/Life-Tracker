@@ -11,6 +11,7 @@ function Nav(props){
             <h1>Life Tracker</h1>
             <div>
                 <Button onClick={() => props.history.push('/login')}>Login</Button>
+                <Button onClick={() => props.history.push('/')}>Home</Button>
                 <Button onClick={() => props.history.push('/fitness')}>Fitness</Button>
                 <Button onClick={() => props.history.push('/budget')}>Budget</Button>
             </div>

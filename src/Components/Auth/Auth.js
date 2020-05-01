@@ -34,7 +34,7 @@ function Auth(props){
                 <div>
                     <h1>Login</h1>
                     <Input placeholder='Username' onChange={e => setUsername(e.target.value)}></Input>
-                    <Input placeholder='Password' onChange={e => setPassword(e.target.value)}></Input>
+                    <Input placeholder='Password' type='password' onChange={e => setPassword(e.target.value)}></Input>
                     <Button onClick={() => login()}>Login</Button>
                     <p onClick={() => setRegister(true)}>Don't have an account? Click here</p>
                 </div>
@@ -42,8 +42,8 @@ function Auth(props){
                 <div>
                     <h1>Register</h1>
                     <Input placeholder='Username' onChange={e => setUsername(e.target.value)}></Input>
-                    <Input placeholder='Password' onChange={e => setPassword(e.target.value)}></Input>
-                    <Input placeholder='Confirm Password' onChange={e => setConfirmPassword(e.target.value)}></Input>
+                    <Input placeholder='Password' type='password' onChange={e => setPassword(e.target.value)}></Input>
+                    <Input placeholder='Confirm Password' type='password' onChange={e => setConfirmPassword(e.target.value)}></Input>
                     <Input placeholder='Email (Optional)' onChange={e => setEmail(e.target.value)}></Input>
                     <Button onClick={() => registerUser()}>Register</Button>      
                     <p onClick={() => setRegister(false)}>Already have an account? Click here</p>
